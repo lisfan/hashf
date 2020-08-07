@@ -1,7 +1,7 @@
 {
   "name": "hashf",
-  "version": "0.9.3",
-  "description": "HASHF - hash files and rename it 生成文件hash，并按指定格式重命名文件",
+  "version": "0.9.4",
+  "description": "HASHF - hash file and rename it 生成文件hash，并按指定格式重命名文件",
   "keywords": [
     "md5",
     "md5sum",

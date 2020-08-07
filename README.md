@@ -1,4 +1,4 @@
-# HASHF - hash files and rename it
+# HASHF - hash file and rename it
 
 生成文件hash，并按指定格式重命名文件
 
