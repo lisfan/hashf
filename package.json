@@ -1,0 +1,28 @@
+{
+  "name": "hashf",
+  "version": "0.9.3",
+  "description": "HASHF - hash files and rename it 生成文件hash，并按指定格式重命名文件",
+  "keywords": [
+    "md5",
+    "md5sum",
+    "checksum",
+    "hash"
+  ],
+  "repository": "https://github.com/lisfan/hashf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lisfan",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "glob": "^7.1.6",
+    "hasha": "^5.2.0",
+    "lodash": "^4.17.19",
+    "yargs": "^15.4.1"
+  },
+  "bin": {
+    "hashf": "bin/command.js"
+  }
+}
