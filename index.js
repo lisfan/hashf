@@ -5,8 +5,8 @@ const glob = require('./utils/glob-enhance')
 const hashFile = require('./lib/hash-file')
 
 glob.globs({
-    include: ['/Users/lisfan/lisfan/Uncategorized/test/**', '/Users/lisfan/lisfan/Uncategorized/test2'],
-    exclude: yargs.argv.ignore,
+    include: yargs.argv.path.split(','),
+    exclude: yargs.argv.ignore.split(','),
     options: {
         nosort: true,
         nodir: true,

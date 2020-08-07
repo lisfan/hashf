@@ -17,20 +17,20 @@ glob.globs = function globEnhance(options) {
     const includeList = _.castArray(options.include)
 
     const globPromiseList = includeList.map((includePattern) => {
-        // 如果不含magic特殊字符
-        // 再判断指定文件是否存在
-        // 则进行常规的文件夹类型还是文件类型判断
-        if (!glob.hasMagic(includePattern)) {
-            if (!fs.existsSync(includePattern)) {
-                return resolve([])
-            }
-
-            if (fs.statSync(includePattern).isDirectory(includePattern)) {
-                includePattern = includePattern + '/**'
-            }
-        }
-
         return new Promise((resolve, reject) => {
+            // 如果不含magic特殊字符
+            // 再判断指定文件是否存在
+            // 则进行常规的文件夹类型还是文件类型判断
+            if (!glob.hasMagic(includePattern)) {
+                if (!fs.existsSync(includePattern)) {
+                    return resolve([])
+                }
+
+                if (fs.statSync(includePattern).isDirectory(includePattern)) {
+                    includePattern = includePattern + '/**'
+                }
+            }
+
             glob(includePattern, {
                 ...options.options,
                 ignore: options.exclude,

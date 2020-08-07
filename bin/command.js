@@ -12,7 +12,7 @@ const config = require('../lib/config')
 
 module.exports = yargs.options('p', {
     alias: ['path'],
-    describe: '指定文件或文件夹路径',
+    describe: '指定文件或文件夹路径，多个路径，通过,号分隔',
     demandOption: true,
     type: 'string',
 }).options('a', {
@@ -28,7 +28,7 @@ module.exports = yargs.options('p', {
     type: 'string',
 }).options('i', {
     alias: ['ignore'],
-    describe: '指定要忽略的文件名列表，支持glob模式',
+    describe: '指定要忽略的文件名列表，支持glob模式，多个路径，通过,号分隔',
     // demandOption: false,
     default: config.ignore,
     type: 'string',
